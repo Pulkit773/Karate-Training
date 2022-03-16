@@ -23,8 +23,8 @@ Feature: To test the delete end point
     And headers {Accept:'application/json'}
     When method get
     Then status 404
-    
-      Scenario: To delete the job entry from application using job id and delete the job entry twice
+
+  Scenario: To delete the job entry from application using job id and delete the job entry twice
     #Create a new job entry
     #Delete the newly  created job entry
     #Get request with query parameter and check for 404 error
@@ -41,8 +41,7 @@ Feature: To test the delete end point
     And header Accept = 'application/json'
     When method delete
     Then status 404
-    
-    
+
   Scenario: To demo request chaining
     # Create a new job entry
     # Extract the job id and job title from the response of POST request.
@@ -65,13 +64,9 @@ Feature: To test the delete end point
     Then status 200
     * def jobId = response.jobId
     * def jobTitle = response.jobTitle
-    
     #Get request with query parameters
     Given path 'normal/webapi/find'
     And params {id : '#(jobId)',jobTitle: '#(jobTitle)'}
     When method get
     Then status 200
     And match response.jobDescription == jobDes
-    
-   
-    
