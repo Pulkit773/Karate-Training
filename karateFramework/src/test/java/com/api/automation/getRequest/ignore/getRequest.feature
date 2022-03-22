@@ -22,6 +22,7 @@ And header Accept = 'application/json'
 When method get # Send the get Request
 Then status 200 # the status code response should be 200
 
+@ignore
 Scenario: To get all the data from the application in xml format using path variables
 Given url 'http://localhost:9898'
 And path '/normal/webapi/all'

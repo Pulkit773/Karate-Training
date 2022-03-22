@@ -1,3 +1,4 @@
+@ignore
 Feature: To validate the GET end point 
 	To validate the get end point response
 	
