@@ -20,7 +20,7 @@ public class ParallelBuilderWithCucumberReport {
 	@Test
 	public void executeKarateTest() {
 		Builder aRunner = new Builder();
-		aRunner.path("classpath:com/api/automation").outputCucumberJson(true);
+		aRunner.path("classpath:com/api/automation");//.outputCucumberJson(true);
 		Results result = aRunner.parallel(5);
 		System.out.println("Total Feature => " + result.getFeaturesTotal());
 		System.out.println("Total Scnearios => " + result.getScenariosTotal());
